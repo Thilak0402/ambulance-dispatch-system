@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Build & Test') {
             steps {
-                sh 'mvn clean test'
+                // Use 'bat' instead of 'sh' for Windows environments
+                bat 'mvn clean test'
             }
         }
     }
